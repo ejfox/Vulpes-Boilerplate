@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" media="all" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	
+	<!-- LESS framework stylesheet 
+	Should be compiled from style.less
+	I use http://wearekiss.com/simpless for auto-compiling on save
+	-->	
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	<!-- Bring in animate.css | http://daneden.me/animate/ -->	
+	<link rel="stylesheet" href="animate.css" type="text/css" media="screen" title="no title" charset="utf-8">
+			
+	<!-- Bring in jQuery first, lots of other stuff depends on it -->
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>	
+
+	<!-- And underscore | http://documentcloud.github.com/underscore/ -->	
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	
+
+	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference -->	
+	<script src="js/d3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- And Chroma.js | https://github.com/gka/chroma.js/wiki/Colors -->	
+	<script src="js/chroma.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js -->		
+	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- And smooth scrolling | from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->			
+	<script src="js/smooth_scrolling.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<!-- Additional D3 libraries which we may or may not need
+	<script src="js/d3.time.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/d3.layout.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/d3.geom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/d3.geo.js" type="text/javascript" charset="utf-8"></script>		
+	-->
+	
+	<style type="text/css" media="screen">
+		#title {
+			background-color: #CCC;
+		}
+	</style>
+	
+</head>
+<body>
+<div id="container">
+	<div id="title">
+		<h1>Nibh Fusce Pellentesque</h1>
+	</div>
+	
+	<div id="content">
+		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. <a href="#content-2">Pellentesque ornare</a> sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+	</div>
+	
+	<div id="content-2">
+		<h2>Nullam Ipsum Sem</h2>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+		<h3>Sit Pellentesque Tortor Tristique Vulputate</h3>
+		<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec sed odio dui.</p>
+	</div>
+	
+</div>
+<script type="text/javascript" charset="utf-8">
+	
+	$(document).ready(function(){
+		
+		$("#title").lettering('words');		
+		
+	});
+
+	
+</script>
+</body>
+</html>

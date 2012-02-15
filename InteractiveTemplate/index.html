@@ -69,6 +69,10 @@
 		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. <a href="#content-2">Pellentesque ornare</a> sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 	</div>
 	
+	<div id="pin" style="position: fixed; top: 0px;">
+		<h2>Test!</h2>
+	</div>
+	
 	<div id="content-2" class="section">
 		<h2>Nullam Ipsum Sem</h2>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -99,8 +103,21 @@
 		scrollorama.onBlockChange(function(){
 				var i=scrollorama.blockIndex;
 				console.log(i);
-			});
+		});
 		
+		/*
+		scrollorama.animate('#content-2', {
+			duration: 700, 
+			property:'padding-top',
+			start: 400,
+			pin: true
+		});
+		*/
+		
+		scrollorama.animate('#content-2',{ duration: 800, property:'rotate', start:720 });
+		
+		// Split h1 into words 
+		// for more specific styling
 		$("#title h1").lettering('words');		
 		
 	});

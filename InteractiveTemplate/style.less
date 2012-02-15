@@ -77,7 +77,7 @@ body {
 /*	Column class / mixins 
 	---------------------	*/
 
-.1-column { width: 68px;   }
+.1-column { width:  68px;   }
 .2-column { width: 160px;  }
 .3-column { width: 252px;  }
 .4-column { width: 344px;  }
@@ -86,12 +86,15 @@ body {
 .7-column { width: 620px;  }
 .8-column { width: 712px;  }
 .9-column { width: 804px;  }
-.10-column { width: 896px; }
+.10-column {width: 896px; }
 
 
 /*	Color variables
 	------------------	*/
+/* Highlight color, when user selects text */
 @highlight: #DDE97E;
+
+/* Link color, hover/visited will be generated from this */
 @linkcolor: #286C99;
 	
 
@@ -135,6 +138,9 @@ a {
 		@darklinkcolor: darken(@linkcolor, 25%);
 		color: @darklinkcolor;
 	}
+}
+#content {
+	.5-column;
 }
 
 

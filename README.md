@@ -7,6 +7,7 @@ Currently all that is included is a template with the proper libraries included,
 I am also considering working on a sister/branch of this project  for interactive templates based on Jmpress.js ( http://shama.github.com/jmpress.js/ ) 
 
 The libraries/frameworks currently included are:
+
 * LESS Framework 4 - http://lessframework.com/
 
 * jQuery - http://jquery.com/

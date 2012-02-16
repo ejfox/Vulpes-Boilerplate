@@ -8,12 +8,19 @@ I am also considering working on a sister/branch of this project  for interactiv
 
 The libraries/frameworks currently included are:
 * LESS Framework 4 - http://lessframework.com/
+
 * jQuery - http://jquery.com/
+
 * Underscore - http://documentcloud.github.com/underscore/
+
 * D3.js - https://github.com/mbostock/d3/wiki/API-Reference
+
 * Chroma.js - https://github.com/gka/chroma.js/wiki/Colors
+
 * Lettering.js - https://github.com/davatron5000/Lettering.js
+
 * Scrollorama - http://johnpolacek.github.com/scrollorama/
+
 * Less.css - http://lesscss.org/
 
 + Smooth Scrolling from http://css-tricks.com/snippets/jquery/smooth-scrolling/

@@ -11,6 +11,21 @@
 /* from http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased; }
+
+
+pre {
+	padding: 15px;
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
 p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 

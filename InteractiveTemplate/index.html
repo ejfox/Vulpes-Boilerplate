@@ -30,7 +30,7 @@
 	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	
 
 	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference -->	
-	<script src="js/d3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/d3.v2.min.js" type="text/javascript" charset="utf-8"></script>
 	
 	<!-- And Chroma.js | https://github.com/gka/chroma.js/wiki/Colors -->	
 	<script src="js/chroma.min.js" type="text/javascript" charset="utf-8"></script>
@@ -38,20 +38,9 @@
 	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js -->		
 	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script>
 	
-	<!-- And smooth scrolling | from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->			
-	<script src="js/smooth_scrolling.js" type="text/javascript" charset="utf-8"></script>
-	
 	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/ -->			
 	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script>
 	
-	
-	
-	<!-- Additional D3 libraries which we may or may not need
-	<script src="js/d3.time.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/d3.layout.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/d3.geom.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/d3.geo.js" type="text/javascript" charset="utf-8"></script>		
-	-->
 	
 	
 </head>
@@ -89,8 +78,6 @@
 				console.log(i);
 		});
 		
-		scrollorama.animate('#content-2',{ duration: 800, property:'rotate', start:720 });
-		
 		// Split h1 into words 
 		// for more specific styling
 		$("#title h1").lettering('words');		
@@ -99,5 +86,7 @@
 
 	
 </script>
+<!-- And smooth scrolling | from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->			
+<script src="js/smooth_scrolling.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -1,53 +1,54 @@
-var scrolloffset = 0;
-var scrolltiming = 1000;
+var scrollableElement, scrolloffset, scrolltiming;
 
-// Smooth scrolling
+scrolloffset = 0;
+
+scrolltiming = 1000;
+
 $(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
-
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
+  var filterPath, locationPath, scrollElem;
+  filterPath = function(string) {
+    string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
+    return string;
+  };
+  locationPath = filterPath(location.pathname);
+  scrollElem = scrollableElement('html', 'body');
+  return $('a[href*=#]').each(function() {
+    var $target, target, targetOffset, thisPath;
+    thisPath = filterPath(this.pathname) || locationPath;
+    if (locationPath === thisPath && (location.hostname === this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
+      $target = $(this.hash);
+      target = this.hash;
       if (target) {
-        var targetOffset = $target.offset().top-scrolloffset;
-        $(this).click(function(event) {
+        targetOffset = $target.offset().top - scrolloffset;
+        return $(this).click(function(event) {
+          console.log("Click", scrollElem);
           event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, scrolltiming, function() {
-            location.hash = target;
+          return $(scrollElem).animate({
+            scrollTop: targetOffset,
+            ease: 'easeOut'
+          }, scrolltiming, function() {
+            return location.hash = target;
           });
         });
       }
     }
   });
-
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
-
 });
 
+scrollableElement = function(els) {
+  var $scrollElement, el, i, isScrollable, _i, _len;
+  for (_i = 0, _len = arguments.length; _i < _len; _i++) {
+    i = arguments[_i];
+    el = arguments[_i];
+    $scrollElement = $(el);
+    if ($scrollElement.scrollTop() > 0) {
+      return el;
+    } else {
+      $scrollElement.scrollTop(1);
+      isScrollable = $scrollElement.scrollTop() > 0;
+      $scrollElement.scrollTop(0);
+      if (isScrollable) return el;
+    }
+  }
+  return [];
+};

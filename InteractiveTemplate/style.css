@@ -252,7 +252,7 @@ cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 body {
   width: 896px;
-  padding: 72px 48px 84px;
+  padding: 32px 48px 84px;
   background: #f7f7f7;
   color: #454545;
   -webkit-text-size-adjust: 100%;
@@ -283,7 +283,7 @@ px      68    160    252    344    436    528    620    712    */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     width: 712px;
-    padding: 48px 28px 60px;
+    padding: 32px 28px 60px;
   }
 }
 /*		Mobile Layout: 320px.
@@ -296,7 +296,7 @@ px      68    160    252    */
 @media only screen and (max-width: 767px) {
   body {
     width: 252px;
-    padding: 48px 34px 60px;
+    padding: 24px 34px 60px;
   }
 }
 /*		Wide Mobile Layout: 480px.
@@ -309,6 +309,6 @@ px      68    160    252    344    436    */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   body {
     width: 436px;
-    padding: 36px 22px 48px;
+    padding: 24px 22px 48px;
   }
 }

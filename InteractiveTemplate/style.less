@@ -181,6 +181,28 @@ footer, header, nav, section, audio, video { display: block; }
 
 a img {border: 0;}
 
+
+
+/*	Color variables
+	------------------	*/
+
+@fontcolor: #454545;
+@bgcolor: #f7f7f7;
+/* Highlight color, when user selects text */
+@highlight: #b5bfcb;
+
+/* Link color, hover/visited will be generated from this */
+@linkcolor: #10206d;
+	
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: @highlight;}
+::-moz-selection 	{background: @highlight;}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: @highlight;}
+
 /*	Typography presets
 	------------------	*/
 
@@ -191,28 +213,41 @@ a img {border: 0;}
 }
 
 .huge, h1 {
+	color: darken(@fontcolor, 35%);
 	font-size: 72px;
-	line-height: 72px;
+	line-height: 78px;
 	letter-spacing: -1px;
+	font-weight: 800;
+	margin-bottom: 12px;
 }
 
 .large, h2 {
+	color: darken(@fontcolor, 12%);	
 	font-size: 44px;
 	line-height: 48px;
+	font-weight: 800;
 }
 
 .bigger, h3 {
+	color: darken(@fontcolor, 10%);	
 	font-size: 28px;
 	line-height: 36px;
+	font-weight: 800;
 }
 
 .big, h4 {
+	color: darken(@fontcolor, 7%);		
 	font-size: 24px;
 	line-height: 30px;
+	font-weight: 700;
 }
 
 body {
-	font: 17px/24px Palatino, Constantia, "Palatino Linotype", serif;
+	font: 17px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400 !important;
+}
+strong {
+	font-weight: 400;
 }
 
 .small, small {
@@ -241,23 +276,6 @@ body {
 .10-column {width: 896px; }
 
 
-/*	Color variables
-	------------------	*/
-/* Highlight color, when user selects text */
-@highlight: #b5bfcb;
-
-/* Link color, hover/visited will be generated from this */
-@linkcolor: #286C99;
-	
-
-/* Selection colours (easy to forget) */
-
-::selection 	 	{background: @highlight;}
-::-moz-selection 	{background: @highlight;}
-img::selection 		{background: transparent;}
-img::-moz-selection	{background: transparent;}
-body {-webkit-tap-highlight-color: @highlight;}
-
 
 
 /*		Default Layout: 992px. 
@@ -271,8 +289,8 @@ px      68    160    252    344    436    528    620    712    804    896    */
 body {
 	width: 896px;
 	padding: 72px 48px 84px;
-	background: rgb(232,232,232);
-	color: rgb(60,60,60);
+	background: @bgcolor;
+	color: @fontcolor;
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 	margin-left: auto;
 	margin-right: auto;
@@ -280,14 +298,15 @@ body {
 a {
 	&:link{
 		color: @linkcolor;
+	 	.transition(0.24s, ease-in-out)
+
 	}
 	&:hover {
-		@darklinkcolor: darken(@linkcolor, 16%);
+		@darklinkcolor: darken(@linkcolor, 15%);
 		color: @darklinkcolor;
-	 	.transition(0.3s)
 	}
 	&:visited {
-		@darklinkcolor: darken(@linkcolor, 20%);
+		@darklinkcolor: darken(@linkcolor, 18%);
 		color: @darklinkcolor;
 	}
 }

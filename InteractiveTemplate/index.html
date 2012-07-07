@@ -18,7 +18,7 @@
 	Should be compiled from style.less
 	I use http://wearekiss.com/simpless for auto-compiling on save
 	-->	
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
 	
 	<!-- Bring in animate.css | http://daneden.me/animate/ -->	
 	<!--<link rel="stylesheet" href="animate.css" type="text/css" media="screen" title="no title" charset="utf-8"> -->
@@ -26,20 +26,20 @@
 	<!-- Bring in jQuery first, lots of other stuff depends on it -->
 	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>	
 
-	<!-- And underscore | http://documentcloud.github.com/underscore/ -->	
-	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	
+	<!-- And underscore | http://documentcloud.github.com/underscore/	
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	-->
 
-	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference -->	
-	<script src="js/d3.v2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference 	
+	<script src="js/d3.v2.min.js" type="text/javascript" charset="utf-8"></script> -->
 	
-	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js -->		
-	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script>
+	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js 		
+	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
 	
-	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/ -->			
-	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script>
+	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/ 			
+	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script> -->
 	
-	<!-- And Tabletop | https://github.com/jsoma/tabletop -->				
-	<script src="js/tabletop.js" type="text/javascript" charset="utf-8"></script>
+	<!-- And Tabletop | https://github.com/jsoma/tabletop 				
+	<script src="js/tabletop.js" type="text/javascript" charset="utf-8"></script> -->
 
 	<!-- And the Open Sans Google Webfont | https://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800,300' rel='stylesheet' type='text/css'>	
@@ -67,21 +67,25 @@
 <script type="text/javascript" charset="utf-8">
 	
 	$(document).ready(function(){
+
+		// Split h1 into words 
+		// for more specific styling
+		// $("#title h1").lettering('words');	
 		
 		// Initialize scrollorama for all elements with
 		// the class of "section"
+		/*
 		var scrollorama = $.scrollorama({
-			blocks: '.section'
+			blocks: '.section',
+			enablePin: false
 		});
 		
 		scrollorama.onBlockChange(function(){
 				var i=scrollorama.blockIndex;
 				console.log(i);
 		});
-		
-		// Split h1 into words 
-		// for more specific styling
-		$("#title h1").lettering('words');		
+		*/
+	
 		
 	});
 

@@ -192,8 +192,7 @@ a img {border: 0;}
 @highlight: #b5bfcb;
 
 /* Link color, hover/visited will be generated from this */
-@linkcolor: #10206d;
-	
+@linkcolor: #10206d;	
 
 /* Selection colours (easy to forget) */
 
@@ -226,12 +225,13 @@ body {-webkit-tap-highlight-color: @highlight;}
 	font-size: 44px;
 	line-height: 48px;
 	font-weight: 800;
+	line-height: 1.5em;
 }
 
 .bigger, h3 {
 	color: darken(@fontcolor, 10%);	
 	font-size: 28px;
-	line-height: 36px;
+	line-height: 1.5em;
 	font-weight: 800;
 }
 
@@ -245,6 +245,7 @@ body {-webkit-tap-highlight-color: @highlight;}
 body {
 	font: 17px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400 !important;
+	line-height: 1.4em;
 }
 strong {
 	font-weight: 400;
@@ -364,3 +365,129 @@ px      68    160    252    344    436    */
 	}
 	
 }
+
+
+/* 
+        Styling those forms / inputs
+        
+------------------------------------------------------------ */
+label {
+    color: black;
+}
+input, textarea, select {
+   -webkit-appearance: none;
+}
+th {
+    text-align: right;
+}
+button {
+    opacity: 0.82;
+    border: 1px solid rgba(0,0,0,0.6);    
+    padding: 0.5em;
+    margin: 4px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.2em;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -webkit-border-radius: 0.5em;
+    outline: none;
+    
+
+    
+    text-shadow: 0 2px 1px #FFF;
+    
+    background-color: #ffffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(214, 214, 214)));
+    background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
+    
+    .transition(0.001s);
+    
+    &:hover {
+        .transition(0.3s);        
+        opacity: 1;
+        border: 1px solid rgba(0,0,0,0.7);
+        text-shadow: 0 2px 2px #FFF;                
+    }
+    &:active {
+        opacity: 0.9;
+        border: 1px solid black;
+        
+        background-color: #ffffff;
+        background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(146, 146, 146)), to(rgb(255, 255, 255)));
+        background-image: -webkit-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -moz-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -o-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -ms-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        
+    }
+
+}
+.small-button {
+    padding: 2px 4px;
+    font-size: 10px;
+    text-shadow: 0 1px 1px #FFF;    
+}
+input, textarea, select {
+    border: 2px solid rgba(0,0,0,0.2);
+    padding: 0.5em;
+    margin: 4px 8px;
+    font-size: 15px;
+    line-height: 1.2em;
+    width: 13em;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -webkit-border-radius: 0.5em;
+    outline: none;
+    
+    background-color: #ebebeb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(255, 255, 255)));
+    background-image: -webkit-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
+    background-image: -moz-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
+    background-image: -o-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
+    background-image: -ms-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
+    background-image: linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ebebeb', EndColorStr='#ffffff');
+    
+    .transition(0.8s);
+    
+    &:hover {
+        border: 2px solid rgba(0,0,0,0.4);        
+    }
+    &:active, &:focus {
+        border: 2px solid rgba(0,0,0,0.5);                
+        background-color: #ffffff;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(214, 214, 214)));
+        background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+        background-image: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+        background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+        background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+        background-image: linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
+        
+        text-shadow: 0 2px 1px #FFF;        
+    }
+}
+input[type=checkbox],
+ input[type=radio] {
+   display: inline-block;
+   font-size: 15px;
+   line-height: 1em;
+   margin: 0 0.25em 0 0;
+   padding: 0;
+   width: 1.25em;
+   height: 1.25em;
+   -webkit-border-radius: 0.25em;
+   vertical-align: text-top;
+ }
+input[type=radio] {
+    -webkit-border-radius: 2em; /* Make radios round */
+}
+
+

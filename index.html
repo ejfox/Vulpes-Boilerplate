@@ -53,6 +53,17 @@
 	
 	<div id="content" class="section">
 		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. <a href="#content-2">Pellentesque ornare</a> sem lacinia quam venenatis vestibulum. <strong>Morbi leo risus</strong>, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+		
+		<div id="form">
+			<form action="index_submit" method="get" accept-charset="utf-8">
+				<table border="0" cellspacing="5" cellpadding="5">
+					<tr><th><label for="username">Username</label></th><td><input type="text" name="username" value="" id="username"></td></tr>
+					<tr><th><label for="email">Email</label></th><td><input type="text"  class="email" name="email" value="" id="email"></td></tr>					
+				</table>
+				</form>
+				<p><button>Thing one</button> <button>Thing two</button> <button>Thing three</button><button class="small-button">Thing four</button></p>
+				<p><input type="submit" value="Continue &rarr;"></p>
+		</div>
 	</div>
 	
 	<div id="content-2" class="section">
@@ -106,5 +117,7 @@
 </script>
 <!-- And smooth scrolling | from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->			
 <script src="js/smooth_scrolling.js" type="text/javascript" charset="utf-8"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

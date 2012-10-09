@@ -4,7 +4,6 @@ The vision for this project was to create a template/boilerplate for creating in
 
 Currently all that is included is a template with the proper libraries included, but I am working to build a better example/wireframe page to build off of. 
 
-I am also considering working on a sister/branch of this project  for interactive templates based on Jmpress.js ( http://shama.github.com/jmpress.js/ ) 
 
 The libraries/frameworks currently included are:
 

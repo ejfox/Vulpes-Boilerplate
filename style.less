@@ -200,7 +200,7 @@ a img {border: 0;}
 @fontcolor: #272727;
 @bgcolor: #f7f7f7;
 /* Highlight color, when user selects text */
-@highlight: #b5bfcb;
+@highlight: #FFF9A2;
 
 /* Link color, hover/visited will be generated from this */
 @linkcolor: #10206d;	
@@ -228,7 +228,7 @@ body {-webkit-tap-highlight-color: @highlight;}
 	line-height: 78px;
 	letter-spacing: -1px;
 	font-weight: 800;
-	margin-bottom: 12px;
+	margin-bottom: 18px;
 }
 
 .large, h2 {
@@ -237,6 +237,7 @@ body {-webkit-tap-highlight-color: @highlight;}
 	line-height: 48px;
 	font-weight: 800;
 	line-height: 1.5em;
+	margin-bottom: 8px;
 }
 
 .bigger, h3 {
@@ -244,6 +245,7 @@ body {-webkit-tap-highlight-color: @highlight;}
 	font-size: 28px;
 	line-height: 1.5em;
 	font-weight: 800;
+    margin: 8px 0;
 }
 
 .big, h4 {
@@ -251,20 +253,21 @@ body {-webkit-tap-highlight-color: @highlight;}
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 700;
+    margin: 8px 0;
 }
 
 body {
-	font: 17px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 400 !important;
-	line-height: 1.4em;
+	font: 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.45em;
 }
 strong {
-	font-weight: 400;
+	font-weight: 800;
 }
 
 .small, small {
-	font-size: 13px;
-	line-height: 18px;
+    opacity: 0.8;
+	font-size: 70%;
+    line-height: 1.2em;
 }
 
 .border-radius (@radius) {
@@ -322,6 +325,11 @@ a {
 		color: @darklinkcolor;
 	}
 }
+.section {
+    margin: 12px 0;
+}
+
+
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
@@ -485,6 +493,16 @@ input, textarea, select {
         text-shadow: 0 2px 1px #FFF;        
     }
 }
+input[type=text] {
+    
+    color: #5A5A5A;
+    
+    &:active, &:focus {
+        color: black;
+        background-image: none !important;
+        background-color: white;
+    }
+}
 input[type=checkbox],
  input[type=radio] {
    display: inline-block;
@@ -499,6 +517,54 @@ input[type=checkbox],
  }
 input[type=radio] {
     -webkit-border-radius: 2em; /* Make radios round */
+}
+input[type=submit] {
+    opacity: 0.95;
+    border: 3px solid rgba(0,0,0,0.55);    
+    padding: 0.5em;
+    margin: 4px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.2em;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -webkit-border-radius: 0.5em;
+    outline: none;
+    
+
+    
+    text-shadow: 0 2px 1px #FFF;
+    
+    background-color: #ffffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(214, 214, 214)));
+    background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    background-image: linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
+    
+    .transition(0.1s);
+    
+    &:hover {
+        .transition(0.3s);        
+        opacity: 1;
+        border: 3px solid rgba(0,0,0,0.9);
+        text-shadow: 0 2px 2px #FFF;                
+    }
+    &:active {
+        opacity: 0.9;
+        border: 1px solid black;
+        
+        background-color: #ffffff;
+        background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(146, 146, 146)), to(rgb(255, 255, 255)));
+        background-image: -webkit-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -moz-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -o-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: -ms-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        background-image: radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
+        
+    }
 }
 
 

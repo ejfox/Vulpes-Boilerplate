@@ -148,10 +148,10 @@ a img {
 /* Link color, hover/visited will be generated from this */
 /* Selection colours (easy to forget) */
 ::selection {
-  background: #b5bfcb;
+  background: #fff9a2;
 }
 ::-moz-selection {
-  background: #b5bfcb;
+  background: #fff9a2;
 }
 img::selection {
   background: transparent;
@@ -160,7 +160,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  -webkit-tap-highlight-color: #b5bfcb;
+  -webkit-tap-highlight-color: #fff9a2;
 }
 /*	Typography presets
 	------------------	*/
@@ -176,7 +176,7 @@ h1 {
   line-height: 78px;
   letter-spacing: -1px;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 .large,
 h2 {
@@ -185,6 +185,7 @@ h2 {
   line-height: 48px;
   font-weight: 800;
   line-height: 1.5em;
+  margin-bottom: 8px;
 }
 .bigger,
 h3 {
@@ -192,6 +193,7 @@ h3 {
   font-size: 28px;
   line-height: 1.5em;
   font-weight: 800;
+  margin: 8px 0;
 }
 .big,
 h4 {
@@ -199,19 +201,20 @@ h4 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  margin: 8px 0;
 }
 body {
-  font: 17px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400 !important;
-  line-height: 1.4em;
+  font: 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.45em;
 }
 strong {
-  font-weight: 400;
+  font-weight: 800;
 }
 .small,
 small {
-  font-size: 13px;
-  line-height: 18px;
+  opacity: 0.8;
+  font-size: 70%;
+  line-height: 1.2em;
 }
 /*	Column class / mixins 
 	---------------------	*/
@@ -274,6 +277,9 @@ a:hover {
 }
 a:visited {
   color: #04081d;
+}
+.section {
+  margin: 12px 0;
 }
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
@@ -425,6 +431,15 @@ select:focus {
   filter: progid:dximagetransform.microsoft.gradient(GradientType=0, StartColorStr='#ffffff', EndColorStr='#d6d6d6');
   text-shadow: 0 2px 1px #FFF;
 }
+input[type=text] {
+  color: #5A5A5A;
+}
+input[type=text]:active,
+input[type=text]:focus {
+  color: black;
+  background-image: none !important;
+  background-color: white;
+}
 input[type=checkbox],
 input[type=radio] {
   display: inline-block;
@@ -441,4 +456,48 @@ input[type=radio] {
   -webkit-border-radius: 2em;
   /* Make radios round */
 
+}
+input[type=submit] {
+  opacity: 0.95;
+  border: 3px solid rgba(0, 0, 0, 0.55);
+  padding: 0.5em;
+  margin: 4px 8px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2em;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+  -webkit-border-radius: 0.5em;
+  outline: none;
+  text-shadow: 0 2px 1px #FFF;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d6d6d6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #d6d6d6);
+  background-image: -moz-linear-gradient(top, #ffffff, #d6d6d6);
+  background-image: -o-linear-gradient(top, #ffffff, #d6d6d6);
+  background-image: -ms-linear-gradient(top, #ffffff, #d6d6d6);
+  background-image: linear-gradient(top, #ffffff, #d6d6d6);
+  filter: progid:dximagetransform.microsoft.gradient(GradientType=0, StartColorStr='#ffffff', EndColorStr='#d6d6d6');
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+input[type=submit]:hover {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  border: 3px solid rgba(0, 0, 0, 0.9);
+  text-shadow: 0 2px 2px #FFF;
+}
+input[type=submit]:active {
+  opacity: 0.9;
+  border: 1px solid black;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#929292), to(#ffffff));
+  background-image: -webkit-radial-gradient(50% 50%, #ffffff, #929292);
+  background-image: -moz-radial-gradient(50% 50%, #ffffff, #929292);
+  background-image: -o-radial-gradient(50% 50%, #ffffff, #929292);
+  background-image: -ms-radial-gradient(50% 50%, #ffffff, #929292);
+  background-image: radial-gradient(50% 50%, #ffffff, #929292);
 }

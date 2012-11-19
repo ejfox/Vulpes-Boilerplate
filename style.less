@@ -213,19 +213,21 @@ img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: @highlight;}
 
+em { background: fade(@highlight, 65%); }
+
 /*	Typography presets
 	------------------	*/
 
 .gigantic {
-	font-size: 116px;
-	line-height: 120px;
+	font-size: 4em;
+	line-height: 1.3em;
 	letter-spacing: -2px;
 }
 
 .huge, h1 {
 	color: darken(@fontcolor, 35%);
-	font-size: 72px;
-	line-height: 78px;
+	font-size: 3.75em;
+	line-height: 1.1em;
 	letter-spacing: -1px;
 	font-weight: 800;
 	margin-bottom: 18px;
@@ -233,16 +235,15 @@ body {-webkit-tap-highlight-color: @highlight;}
 
 .large, h2 {
 	color: darken(@fontcolor, 12%);	
-	font-size: 44px;
-	line-height: 48px;
+	font-size: 2.75em;
+	line-height: 2em;
 	font-weight: 800;
 	line-height: 1.5em;
 	margin-bottom: 8px;
 }
-
 .bigger, h3 {
 	color: darken(@fontcolor, 10%);	
-	font-size: 28px;
+	font-size: 1.75em;
 	line-height: 1.5em;
 	font-weight: 800;
     margin: 8px 0;
@@ -250,14 +251,14 @@ body {-webkit-tap-highlight-color: @highlight;}
 
 .big, h4 {
 	color: darken(@fontcolor, 7%);		
-	font-size: 24px;
-	line-height: 30px;
+	font-size: 1.5em;
+	line-height: 1.5em;
 	font-weight: 700;
     margin: 8px 0;
 }
 
 body {
-	font: 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.45em;
 }
 strong {
@@ -266,8 +267,46 @@ strong {
 
 .small, small {
     opacity: 0.8;
-	font-size: 70%;
+	font-size: 0.7em;
     line-height: 1.2em;
+}
+
+// Font sizes for mobile
+@media only screen and (max-width: 767px) {
+	.huge, h1 {
+    	font-size: 2.5em;
+    	line-height: 1.1em;
+    	margin-bottom: 12px;
+    }
+    
+    .large, h2 {
+    	color: darken(@fontcolor, 12%);	
+    	font-size: 2em;
+    	line-height: 1.3em;
+    	font-weight: 800;
+    	line-height: 1.4em;
+    	margin-bottom: 6px;
+    }
+    
+    .bigger, h3 {
+    	color: darken(@fontcolor, 10%);	
+    	font-size: 1.75em;
+    	line-height: 1.2em;
+    	font-weight: 800;
+        margin: 6px 0;
+    }
+
+    .big, h4 {
+    	color: darken(@fontcolor, 7%);		
+    	font-size: 1.4em;
+    	line-height: 1.5em;
+    	font-weight: 700;
+        margin: 8px 0;
+    }
+}
+
+p {
+    margin: 0.6em 0;
 }
 
 .border-radius (@radius) {
@@ -302,7 +341,9 @@ cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
-	width: 896px;
+    font-size: 1.3em;
+	max-width: 896px;
+    width: 65%;
 	padding: 32px 48px 84px;
 	background: @bgcolor;
 	color: @fontcolor;
@@ -342,9 +383,12 @@ px      68    160    252    344    436    528    620    712    */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	
 	body {
-		width: 712px;
+		max-width: 712px;
+		width: 80%;
 		padding: 32px 28px 60px;
+		font-size: 1.1em;
 	}
+
 }
 
 
@@ -362,8 +406,10 @@ px      68    160    252    */
 	body {
 		width: 252px;
 		padding: 24px 34px 60px;
+
+		font-size: 1em;
+		line-height: 1.5em;
 	}
-	
 }
 
 
@@ -453,6 +499,7 @@ button {
     font-size: 10px;
     text-shadow: 0 1px 1px #FFF;    
 }
+
 input, textarea, select {
     border: 2px solid rgba(0,0,0,0.2);
     padding: 0.5em;
@@ -491,6 +538,11 @@ input, textarea, select {
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
         
         text-shadow: 0 2px 1px #FFF;        
+    }
+}
+@media only screen and (max-width: 767px) {
+    input, textarea, select {
+        width: 8em;
     }
 }
 input[type=text] {

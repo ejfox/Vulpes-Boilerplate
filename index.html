@@ -6,116 +6,98 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" media="all" href=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-	
-	<!-- LESS framework stylesheet 
+
+	<!-- LESS framework stylesheet
 	Should be compiled from style.less
 	I use http://wearekiss.com/simpless for auto-compiling on save
-	-->	
+	-->
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
-			
+
 	<!-- Bring in jQuery first, lots of other stuff depends on it -->
-	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Add Retina.js for retina support -->
     <script src="js/retina.js" type="text/javascript" charset="utf-8"></script>
 
-	<!-- And underscore | http://documentcloud.github.com/underscore/	
+	<!-- And underscore | http://documentcloud.github.com/underscore/
 	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	-->
 
-	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference 	
+	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference
 	<script src="js/d3.v2.min.js" type="text/javascript" charset="utf-8"></script> -->
-	
-	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js 		
+
+	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js
 	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
-	
-	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/ 			
+
+	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/
 	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script> -->
-	
-	<!-- And Tabletop | https://github.com/jsoma/tabletop 				
+
+	<!-- And Tabletop | https://github.com/jsoma/tabletop
 	<script src="js/tabletop.js" type="text/javascript" charset="utf-8"></script> -->
-	
+
 </head>
 <body>
 <div id="container">
-	<div id="title">
+	<header id="title">
 		<h1>Vulpes Boilerplate</h1>
-	</div>
-	
-	<div id="content" class="section">
+	</header>
+
+	<section id="content">
 		Lorem ipsum dolor sit amet, <em>consectetur adip*isicing elit</em>, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. <a href="#content-2">Pellentesque ornare</a> sem lacinia quam venenatis vestibulum. <strong>Morbi leo risus</strong>, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-	</div>
-	
-	<div id="content-2" class="section">	
-		<div id="form">
+	</section>
+
+	<section id="content-2">
+		<section id="form">
 			<form action="index_submit" method="get" accept-charset="utf-8">
 				<table border="0" cellspacing="5" cellpadding="5">
-					<tr><th><label for="username">Username</label></th><td><input type="text" name="username" value="" id="username"></td></tr>
-					<tr><th><label for="email">Email</label></th><td><input type="text"  class="email" name="email" value="" id="email"></td></tr>					
+					<tr><th><label for="username">Username</label></th><td><input type="text" name="username" value="" id="username" placeholder="Username"></td></tr>
+					<tr><th><label for="email">Email</label></th><td><input type="text"  class="email" name="email" value="" id="email" placeholder="Email"></td></tr>
 				</table>
 				</form>
 				<p><button>Thing one</button> <button>Thing two</button> <button>Thing three</button><button class="small-button">Small button</button></p>
 				<p><input type="submit" value="Continue &rarr;"></p>
-		</div>
-	</div>
-	
-	<div id="content-3" class="section">
+		</section>
+	</section>
+
+	<section id="content-3">
 		<h2>Nullam Ipsum Sem</h2>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet. <small>Consectetur adipiscing elit.</small></p>
 
 		<h3>Sit Pellentesque Tortor Tristique Vulputate</h3>
 		<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Donec sed odio dui.</p>
-		
+
 		<h4>Nullam volutpat, tellus at placerat</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis sapien eget sapien faucibus sed pulvinar mi lacinia. Praesent quis nibh nec nibh hendrerit interdum. Integer luctus viverra nisl, ac mattis neque sagittis sed. Nulla auctor interdum purus eget semper. Vestibulum malesuada mauris ut metus bibendum bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue odio, elementum vel condimentum a, tempor gravida diam. Nulla ultrices erat id lorem suscipit ut fringilla ipsum condimentum. Ut ac dictum tortor. Mauris luctus sapien quis magna tristique eleifend.</p>
 
         <p>Sed tincidunt egestas dapibus. Morbi tempus cursus mauris at ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sit amet dignissim urna. Sed neque turpis, facilisis in dapibus ut, convallis in purus. Donec ante urna, viverra vel porttitor in, rhoncus a nisi. Fusce sit amet venenatis mauris. Integer bibendum massa magna.</p>
 
         <p>Mauris at purus at ipsum mattis mollis iaculis id metus. Phasellus euismod consectetur erat. Sed nec arcu a quam hendrerit scelerisque. Donec neque nisl, fermentum ac sollicitudin ac, elementum ut turpis. Ut sit amet massa ullamcorper purus pharetra iaculis fermentum eu eros. Donec nulla erat, interdum ut condimentum eget, vehicula et risus. Etiam libero tellus, pretium quis egestas ut, bibendum eu orci. Nulla volutpat, urna sit amet pharetra posuere, ligula orci lobortis mi, vel consequat eros sem vitae metus.</p>
-	</div>
-	
+	</section>
+
 </div>
-<script type="text/javascript" charset="utf-8">	
+<script type="text/javascript" charset="utf-8">
 $(document).ready(function(){
 /*
 
 function init() {
   Tabletop.init( { key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
-                   callback: function(data, tabletop) { 
-						console.log(data) 
+                   callback: function(data, tabletop) {
+						console.log(data)
 					},
-                   simpleSheet: true 
+                   simpleSheet: true
 				} )
 }
 
 init();
 
 */
-
-// Split h1 into words 
-// for more specific styling
-// $("#title h1").lettering('words');	
-
-// Initialize scrollorama for all elements with
-// the class of "section"
-/*
-var scrollorama = $.scrollorama({
-	blocks: '.section',
-	enablePin: false
 });
-
-scrollorama.onBlockChange(function(){
-		var i=scrollorama.blockIndex;
-		console.log(i);
-});
-*/
-});	
 </script>
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

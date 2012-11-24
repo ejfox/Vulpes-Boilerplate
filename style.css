@@ -163,7 +163,7 @@ body {
   -webkit-tap-highlight-color: #fff9a2;
 }
 em {
-  background: rgba(255, 249, 162, 0.65);
+  background: rgba(255, 249, 162, 0.5);
 }
 /*	Typography presets
 	------------------	*/
@@ -183,7 +183,7 @@ h1 {
 }
 .large,
 h2 {
-  color: #080808;
+  color: #141414;
   font-size: 2.75em;
   line-height: 2em;
   font-weight: 800;
@@ -192,7 +192,7 @@ h2 {
 }
 .bigger,
 h3 {
-  color: #0e0e0e;
+  color: #1a1a1a;
   font-size: 1.75em;
   line-height: 1.5em;
   font-weight: 800;
@@ -200,7 +200,7 @@ h3 {
 }
 .big,
 h4 {
-  color: #151515;
+  color: #212121;
   font-size: 1.5em;
   line-height: 1.5em;
   font-weight: 700;
@@ -228,7 +228,7 @@ small {
   }
   .large,
   h2 {
-    color: #080808;
+    color: #141414;
     font-size: 2em;
     line-height: 1.3em;
     font-weight: 800;
@@ -237,7 +237,7 @@ small {
   }
   .bigger,
   h3 {
-    color: #0e0e0e;
+    color: #1a1a1a;
     font-size: 1.75em;
     line-height: 1.2em;
     font-weight: 800;
@@ -245,7 +245,7 @@ small {
   }
   .big,
   h4 {
-    color: #151515;
+    color: #212121;
     font-size: 1.4em;
     line-height: 1.5em;
     font-weight: 700;
@@ -255,7 +255,7 @@ small {
 p {
   margin: 0.6em 0;
 }
-/*	Column class / mixins 
+/*	Column class / mixins
 	---------------------	*/
 .1-column {
   width: 68px;
@@ -287,7 +287,7 @@ p {
 .10-column {
   width: 896px;
 }
-/*		Default Layout: 992px. 
+/*		Default Layout: 992px.
 		Gutters: 24px.
 		Outer margins: 48px.
 		Leftover space for scrollbars @1024px: 32px.
@@ -299,8 +299,8 @@ body {
   max-width: 896px;
   width: 65%;
   padding: 32px 48px 84px;
-  background: #f7f7f7;
-  color: #272727;
+  background: #e6e6e6;
+  color: #333333;
   -webkit-text-size-adjust: 100%;
   /* Stops Mobile Safari from auto-adjusting font-sizes */
 
@@ -308,19 +308,22 @@ body {
   margin-right: auto;
 }
 a:link {
-  color: #10206d;
+  color: #112582;
   -webkit-transition: all 0.24s ease-in-out;
   -moz-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out;
 }
 a:hover {
-  color: #060c2a;
+  color: #0b1855;
 }
 a:visited {
-  color: #04081d;
+  color: #08123e;
 }
-.section {
+section {
   margin: 12px 0;
+}
+section:last-child {
+  margin-bottom: 0;
 }
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
@@ -365,9 +368,9 @@ px      68    160    252    344    436    */
     padding: 24px 22px 48px;
   }
 }
-/* 
+/*
         Styling those forms / inputs
-        
+
 ------------------------------------------------------------ */
 label {
   color: black;
@@ -539,12 +542,12 @@ input[type=submit]:hover {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 1;
-  border: 3px solid rgba(0, 0, 0, 0.9);
+  border: 3px solid rgba(0, 0, 0, 0.8);
   text-shadow: 0 2px 2px #FFF;
 }
 input[type=submit]:active {
   opacity: 0.9;
-  border: 1px solid black;
+  border: 3px solid black;
   background-color: #ffffff;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#929292), to(#ffffff));
   background-image: -webkit-radial-gradient(50% 50%, #ffffff, #929292);

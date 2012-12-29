@@ -1,162 +1,9 @@
-// retina.less
-// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+/*  Less Framework 4
+  http://lessframework.com
+  by Joni Korpi
+  License: http://opensource.org/licenses/mit-license.php */
 
-.at2x(@path, @w: auto, @h: auto) {
-  background-image: url(@path);
-  @at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
-
-  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
-    background-image: url(@at2x_path);
-    background-size: @w @h;
-  }
-}
-
-/*---------------------------------------------------
-    LESS Elements 0.6
-  ---------------------------------------------------
-    A set of useful LESS mixins by Dmitry Fadeyev
-    Special thanks for mixin suggestions to:
-      Kris Van Herzeele,
-      Benoit Adam,
-      Portenart Emile-Victor,
-      Ryan Faerman
-
-    More info at: http://lesselements.com
------------------------------------------------------*/
-
-.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
-  background: @color;
-  background: -webkit-gradient(linear,
-                               left bottom,
-                               left top,
-                               color-stop(0, @start),
-                               color-stop(1, @stop));
-  background: -ms-linear-gradient(bottom,
-                                  @start,
-                                  @stop);
-  background: -moz-linear-gradient(center bottom,
-                                   @start 0%,
-                                   @stop 100%);
-}
-.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
-  background: @color;
-  background: -webkit-gradient(linear,
-                               left bottom,
-                               left top,
-                               color-stop(0, rgb(@start,@start,@start)),
-                               color-stop(1, rgb(@stop,@stop,@stop)));
-  background: -ms-linear-gradient(bottom,
-                                  rgb(@start,@start,@start) 0%,
-                                  rgb(@start,@start,@start) 100%);
-  background: -moz-linear-gradient(center bottom,
-                                   rgb(@start,@start,@start) 0%,
-                                   rgb(@stop,@stop,@stop) 100%);
-}
-.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
-  border-top: solid 1px @top-color;
-  border-left: solid 1px @left-color;
-  border-right: solid 1px @right-color;
-  border-bottom: solid 1px @bottom-color;
-}
-.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
-  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-}
-.rounded(@radius: 2px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
-.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
-  -webkit-border-top-right-radius: @topright;
-  -webkit-border-bottom-right-radius: @bottomright;
-  -webkit-border-bottom-left-radius: @bottomleft;
-  -webkit-border-top-left-radius: @topleft;
-  -moz-border-radius-topright: @topright;
-  -moz-border-radius-bottomright: @bottomright;
-  -moz-border-radius-bottomleft: @bottomleft;
-  -moz-border-radius-topleft: @topleft;
-  border-top-right-radius: @topright;
-  border-bottom-right-radius: @bottomright;
-  border-bottom-left-radius: @bottomleft;
-  border-top-left-radius: @topleft;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
-.opacity(@opacity: 0.5) {
-  -moz-opacity: @opacity;
-  -khtml-opacity: @opacity;
-  -webkit-opacity: @opacity;
-  opacity: @opacity;
-}
-.transition-duration(@duration: 0.2s) {
-  -moz-transition-duration: @duration;
-  -webkit-transition-duration: @duration;
-  transition-duration: @duration;
-}
-.rotation(@deg:5deg){
-  -webkit-transform: rotate(@deg);
-  -moz-transform: rotate(@deg);
-  transform: rotate(@deg);
-}
-.scale(@ratio:1.5){
-  -webkit-transform:scale(@ratio);
-  -moz-transform:scale(@ratio);
-  transform:scale(@ratio);
-}
-.transition(@duration:0.2s, @ease:ease-out) {
-  -webkit-transition: all @duration @ease;
-  -moz-transition: all @duration @ease;
-  transition: all @duration @ease;
-}
-.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
-  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-}
-.box-shadow(@arguments) {
-  -webkit-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  box-shadow: @arguments;
-}
-.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
-  -moz-column-width: @colwidth;
-  -moz-column-count: @colcount;
-  -moz-column-gap: @colgap;
-  -moz-column-rule-color: @columnRuleColor;
-  -moz-column-rule-style: @columnRuleStyle;
-  -moz-column-rule-width: @columnRuleWidth;
-  -webkit-column-width: @colwidth;
-  -webkit-column-count: @colcount;
-  -webkit-column-gap: @colgap;
-  -webkit-column-rule-color: @columnRuleColor;
-  -webkit-column-rule-style: @columnRuleStyle;
-  -webkit-column-rule-width: @columnRuleWidth;
-  column-width: @colwidth;
-  column-count: @colcount;
-  column-gap: @colgap;
-  column-rule-color: @columnRuleColor;
-  column-rule-style: @columnRuleStyle;
-  column-rule-width: @columnRuleWidth;
-}
-.translate(@x:0, @y:0) {
-  -moz-transform: translate(@x, @y);
-  -webkit-transform: translate(@x, @y);
-  -o-transform: translate(@x, @y);
-  -ms-transform: translate(@x, @y);
-  transform: translate(@x, @y);
-}
-
-/*	Less Framework 4
-	http://lessframework.com
-	by Joni Korpi
-	License: http://opensource.org/licenses/mit-license.php	*/
-
-
-/*	Resets
-	------	*/
-
+/*	Resets   */
 /* apply a natural box layout model to all elements */
 /* from http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -175,7 +22,6 @@ pre {
 
 /* hand cursor on clickable input elements */
 label, input[type=button], input[type=submit], button { cursor: pointer; }
-
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
@@ -217,13 +63,6 @@ em { background: fade(@highlight, 50%); }
 
 /*	Typography presets
 	------------------	*/
-
-.gigantic {
-	font-size: 4em;
-	line-height: 1.3em;
-	letter-spacing: -2px;
-}
-
 .huge, h1 {
 	color: darken(@fontcolor, 35%);
 	font-size: 3.75em;
@@ -232,7 +71,6 @@ em { background: fade(@highlight, 50%); }
 	font-weight: 800;
 	margin-bottom: 18px;
 }
-
 .large, h2 {
 	color: darken(@fontcolor, 12%);
 	font-size: 2.75em;
@@ -248,7 +86,6 @@ em { background: fade(@highlight, 50%); }
 	font-weight: 800;
     margin: 8px 0;
 }
-
 .big, h4 {
 	color: darken(@fontcolor, 7%);
 	font-size: 1.5em;
@@ -256,19 +93,10 @@ em { background: fade(@highlight, 50%); }
 	font-weight: 700;
     margin: 8px 0;
 }
-
-body {
-	font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 1.45em;
-}
-strong {
-	font-weight: 800;
-}
-
 .small, small {
-    opacity: 0.8;
-	font-size: 0.7em;
-    line-height: 1.2em;
+  opacity: 0.8;
+  font-size: 0.7em;
+  line-height: 1.2em;
 }
 
 // Font sizes for mobile
@@ -309,25 +137,7 @@ p {
     margin: 0.6em 0;
 }
 
-.border-radius (@radius) {
-  border-radius: @radius;
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-}
 
-/*	Column class / mixins
-	---------------------	*/
-
-.1-column { width:  68px;   }
-.2-column { width: 160px;  }
-.3-column { width: 252px;  }
-.4-column { width: 344px;  }
-.5-column { width: 436px;  }
-.6-column { width: 528px;  }
-.7-column { width: 620px;  }
-.8-column { width: 712px;  }
-.9-column { width: 804px;  }
-.10-column {width: 896px; }
 
 
 
@@ -341,38 +151,43 @@ cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
-    font-size: 1.3em;
-	max-width: 896px;
-    width: 65%;
-	padding: 32px 48px 84px;
-	background: @bgcolor;
-	color: @fontcolor;
-	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
-	margin-left: auto;
-	margin-right: auto;
+  font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  line-height: 1.45em;
+  font-size: 1.3em;
+  max-width: 896px;
+  width: 65%;
+  padding: 32px 48px 84px;
+  background: @bgcolor;
+  color: @fontcolor;
+  -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
+
 a {
 	&:link{
 		color: @linkcolor;
-	 	.transition(0.24s, ease-in-out)
-
+	 	.transition(0.24s, ease-in-out);
 	}
-	&:hover {
-		@darklinkcolor: darken(@linkcolor, 10%);
-		color: @darklinkcolor;
-	}
-	&:visited {
-		@darklinkcolor: darken(@linkcolor, 15%);
-		color: @darklinkcolor;
-	}
+	&:hover { color: darken(@linkcolor, 10%); }
+	&:visited { color: darken(@linkcolor, 15%); }
 }
+
 section {
     margin: 12px 0;
-
     &:last-child {
       margin-bottom: 0;
     }
 }
+
+
+
+
+
+
 
 
 
@@ -397,6 +212,14 @@ px      68    160    252    344    436    528    620    712    */
 
 
 
+
+
+
+
+
+
+
+
 /*		Mobile Layout: 320px.
 		Gutters: 24px.
 		Outer margins: 34px.
@@ -418,6 +241,16 @@ px      68    160    252    */
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*		Wide Mobile Layout: 480px.
 		Gutters: 24px.
 		Outer margins: 22px.
@@ -430,10 +263,19 @@ px      68    160    252    344    436    */
 
 	body {
 		width: 436px;
-		padding: 24px 22px 48px;
+		padding: 8px 10px;
 	}
 
 }
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -621,6 +463,168 @@ input[type=submit] {
         background-image: radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
 
     }
+}
+
+
+
+
+
+/*  Column class / mixins
+  --------------------- */
+
+.1-column { width:  68px;   }
+.2-column { width: 160px;  }
+.3-column { width: 252px;  }
+.4-column { width: 344px;  }
+.5-column { width: 436px;  }
+.6-column { width: 528px;  }
+.7-column { width: 620px;  }
+.8-column { width: 712px;  }
+.9-column { width: 804px;  }
+.10-column {width: 896px; }
+
+
+
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+}
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, rgb(@start,@start,@start)),
+                               color-stop(1, rgb(@stop,@stop,@stop)));
+  background: -ms-linear-gradient(bottom,
+                                  rgb(@start,@start,@start) 0%,
+                                  rgb(@start,@start,@start) 100%);
+  background: -moz-linear-gradient(center bottom,
+                                   rgb(@start,@start,@start) 0%,
+                                   rgb(@stop,@stop,@stop) 100%);
+}
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+  border-top: solid 1px @top-color;
+  border-left: solid 1px @left-color;
+  border-right: solid 1px @right-color;
+  border-bottom: solid 1px @bottom-color;
+}
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+}
+.transition-duration(@duration: 0.2s) {
+  -moz-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  transition-duration: @duration;
+}
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+.scale(@ratio:1.5){
+  -webkit-transform:scale(@ratio);
+  -moz-transform:scale(@ratio);
+  transform:scale(@ratio);
+}
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+.translate(@x:0, @y:0) {
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+
+
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+.at2x(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: url(@at2x_path);
+    background-size: @w @h;
+  }
 }
 
 

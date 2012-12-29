@@ -1,21 +1,8 @@
-/*---------------------------------------------------
-    LESS Elements 0.6
-  ---------------------------------------------------
-    A set of useful LESS mixins by Dmitry Fadeyev
-    Special thanks for mixin suggestions to:
-      Kris Van Herzeele,
-      Benoit Adam,
-      Portenart Emile-Victor,
-      Ryan Faerman
-
-    More info at: http://lesselements.com
------------------------------------------------------*/
-/*	Less Framework 4
-	http://lessframework.com
-	by Joni Korpi
-	License: http://opensource.org/licenses/mit-license.php	*/
-/*	Resets
-	------	*/
+/*  Less Framework 4
+  http://lessframework.com
+  by Joni Korpi
+  License: http://opensource.org/licenses/mit-license.php */
+/*	Resets   */
 /* apply a natural box layout model to all elements */
 /* from http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 * {
@@ -167,11 +154,6 @@ em {
 }
 /*	Typography presets
 	------------------	*/
-.gigantic {
-  font-size: 4em;
-  line-height: 1.3em;
-  letter-spacing: -2px;
-}
 .huge,
 h1 {
   color: #000000;
@@ -205,13 +187,6 @@ h4 {
   line-height: 1.5em;
   font-weight: 700;
   margin: 8px 0;
-}
-body {
-  font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.45em;
-}
-strong {
-  font-weight: 800;
 }
 .small,
 small {
@@ -255,38 +230,6 @@ small {
 p {
   margin: 0.6em 0;
 }
-/*	Column class / mixins
-	---------------------	*/
-.1-column {
-  width: 68px;
-}
-.2-column {
-  width: 160px;
-}
-.3-column {
-  width: 252px;
-}
-.4-column {
-  width: 344px;
-}
-.5-column {
-  width: 436px;
-}
-.6-column {
-  width: 528px;
-}
-.7-column {
-  width: 620px;
-}
-.8-column {
-  width: 712px;
-}
-.9-column {
-  width: 804px;
-}
-.10-column {
-  width: 896px;
-}
 /*		Default Layout: 992px.
 		Gutters: 24px.
 		Outer margins: 48px.
@@ -295,6 +238,8 @@ p {
 cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 body {
+  font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.45em;
   font-size: 1.3em;
   max-width: 896px;
   width: 65%;
@@ -365,7 +310,7 @@ px      68    160    252    344    436    */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   body {
     width: 436px;
-    padding: 24px 22px 48px;
+    padding: 8px 10px;
   }
 }
 /*
@@ -556,3 +501,47 @@ input[type=submit]:active {
   background-image: -ms-radial-gradient(50% 50%, #ffffff, #929292);
   background-image: radial-gradient(50% 50%, #ffffff, #929292);
 }
+/*  Column class / mixins
+  --------------------- */
+.1-column {
+  width: 68px;
+}
+.2-column {
+  width: 160px;
+}
+.3-column {
+  width: 252px;
+}
+.4-column {
+  width: 344px;
+}
+.5-column {
+  width: 436px;
+}
+.6-column {
+  width: 528px;
+}
+.7-column {
+  width: 620px;
+}
+.8-column {
+  width: 712px;
+}
+.9-column {
+  width: 804px;
+}
+.10-column {
+  width: 896px;
+}
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/

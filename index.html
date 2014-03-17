@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title></title>
-	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+	<title>Vulpes Boilerplate</title>
+
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,45 +13,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 
-	<!-- LESS framework stylesheet
-	Should be compiled from style.less
-	I use http://wearekiss.com/simpless for auto-compiling on save
-	-->
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
 
-	<!-- Bring in jQuery first, lots of other stuff depends on it -->
-	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <!-- Bring in jQuery first, lots of other stuff depends on it -->
+  <script src="js/jquery.js?v1.11.0" type="text/javascript" charset="utf-8"></script>
 
-    <!-- Add Retina.js for retina support -->
-    <script src="js/retina.js" type="text/javascript" charset="utf-8"></script>
+  <!-- And Underscore | http://underscorejs.org/
+  <script src="js/underscore-min.js?1.6.0" type="text/javascript" charset="utf-8"></script>	-->
 
-	<!-- And underscore | http://documentcloud.github.com/underscore/
-	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	-->
-
-	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference
-	<script src="js/d3.min.js?v3" type="text/javascript" charset="utf-8"></script> -->
-
-	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js
-	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
-
-	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/
-	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script> -->
-
-	<!-- And Tabletop | https://github.com/jsoma/tabletop
-	<script src="js/tabletop.js" type="text/javascript" charset="utf-8"></script> -->
-    
-    <!-- And ICanHaz.js | http://icanhazjs.com/
-    <script src="js/ich.js" type="text/javascript" charset="utf-8"></script> -->
-    
-
+  <!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference
+  <script src="js/d3.min.js?v3" type="text/javascript" charset="utf-8"></script> -->
 </head>
+
 <body>
-    
-<script id="template" type="text/html">
-<p class="test">{{test}}</p>
-</script>    
-    
-    
 <div id="container">
 	<header id="title">
 		<h1>Vulpes Boilerplate</h1>
@@ -61,17 +34,6 @@
 	<section id="content">
 		Lorem ipsum dolor sit amet, <em>consectetur adip*isicing elit</em>, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. <a href="#content-2">Pellentesque ornare</a> sem lacinia quam venenatis vestibulum. <strong>Morbi leo risus</strong>, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 	</section>
-
-		<section id="content-2 form">
-			<form action="index_submit" method="get" accept-charset="utf-8">
-				<table border="0" cellspacing="5" cellpadding="5">
-					<tr><th><label for="username">Username</label></th><td><input type="text" name="username" value="" id="username" placeholder="Username"></td></tr>
-					<tr><th><label for="email">Email</label></th><td><input type="text"  class="email" name="email" value="" id="email" placeholder="Email"></td></tr>
-				</table>
-				</form>
-				<p><button>Thing one</button> <button>Thing two</button> <button>Thing three</button><button class="small-button">Small button</button></p>
-				<p><input type="submit" value="Continue &rarr;"></p>
-		</section>
 
 	<section id="content-3">
 		<h2>Nullam Ipsum Sem</h2>
@@ -88,21 +50,32 @@
         <p>Mauris at purus at ipsum mattis mollis iaculis id metus. Phasellus euismod consectetur erat. Sed nec arcu a quam hendrerit scelerisque. Donec neque nisl, fermentum ac sollicitudin ac, elementum ut turpis. Ut sit amet massa ullamcorper purus pharetra iaculis fermentum eu eros. Donec nulla erat, interdum ut condimentum eget, vehicula et risus. Etiam libero tellus, pretium quis egestas ut, bibendum eu orci. Nulla volutpat, urna sit amet pharetra posuere, ligula orci lobortis mi, vel consequat eros sem vitae metus.</p>
 	</section>
 
+
+	<section class="form">
+		<form action="index_submit" method="get" accept-charset="utf-8">
+			<table border="0" cellspacing="5" cellpadding="5">
+				<tr><th><label for="username">Username</label></th><td><input type="text" name="username" value="" id="username" placeholder="Username"></td></tr>
+				<tr><th><label for="email">Email</label></th><td><input type="text"  class="email" name="email" value="" id="email" placeholder="Email"></td></tr>
+			</table>
+			</form>
+			<p><button>Thing one</button> <button>Thing two</button> <button>Thing three</button><button class="small-button">Small button</button></p>
+			<p><input type="submit" value="Continue &rarr;"></p>
+	</section>
+
 </div>
+
+
+
+
+
+
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function(){
 /*
 
-function init() {
-  Tabletop.init( { key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
-                   callback: function(data, tabletop) {
-						console.log(data)
-					},
-                   simpleSheet: true
-				} )
-}
 
-init();
+  Javascript Here
+
 
 */
 });
